@@ -1,0 +1,46 @@
+doctype html 
+html(lang='en')  
+ head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{taskId}
+    style
+        include ../public/bootstrap/bootstrap.min.css
+        include ../public/styles.css
+ body
+    div(class="container")
+      h2
+        a(style={"text-align": "center"} href=taskLink) Link
+      table(class="table table-bordered table-hover")
+        thead 
+          tr  
+            th(class="info") Date Submitted
+            th(class="info") Task ID
+            th(class="info") # of Errors
+            th(class="info") Error Rate
+        tbody 
+          tr
+            td #{dateSubmitted}
+            td #{taskId}
+            td #{numErrors}
+            td #{errorRate}
+      table(class="table table-bordered table-hover")
+        thead
+          tr
+            th(scope="col" class="info col-md-2" style={"text-align": "center"}) Cuboid ID 
+            th(scope="col" class="info col-md-2" style={"text-align": "center"}) Error Type
+            th(scope="col" class="info col-md-2" style={"text-align": "center"}) Label
+            //- th Nuro ID
+            th(scope="col" class="info col-md-2" style={"text-align": "center"}) Dimensions [x, y, z]
+            th(scope="col" class="info col-md-2" style={"text-align": "center"}) Position [x, y, z]
+            th(scope="col" class="info col-md-2") Frames
+          tbody   
+            each val in report
+              tr
+                  td #{val.cuboidId}
+                  td #{val.error_type}
+                  td #{val.label}
+                  //- td #{val.nuro_id}
+                  td #{val.dimensions}
+                  td #{val.position}
+                  td #{val.frames}

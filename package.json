@@ -1,0 +1,34 @@
+{
+  "name": "mike-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nuro-script.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "npm install; node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benbatscale/nuro-task-script.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benbatscale/nuro-task-script/issues"
+  },
+  "homepage": "https://github.com/benbatscale/nuro-task-script#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "jsonexport": "^2.1.0",
+    "lodash": "^4.17.10",
+    "papaparse": "^4.4.0",
+    "pug": "^2.0.3"
+  },
+  "engines": {
+    "node": "^10.1.0",
+    "npm": "^5.6.0"
+  }
+}
